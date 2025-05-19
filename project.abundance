@@ -6,12 +6,12 @@
     "uniqueID": 1747682086142,
     "ioValues": [
         {
-            "name": "name1",
-            "ioValue": 30
+            "name": "Large Diam add",
+            "ioValue": 50
         },
         {
-            "name": "name2",
-            "ioValue": 2
+            "name": "Movement",
+            "ioValue": 35
         },
         {
             "name": "Small Diam",
@@ -24,13 +24,13 @@
         {
             "atomType": "Output",
             "name": "Output",
-            "x": 0.674043062200957,
-            "y": 0.5346062052505967,
+            "x": 0.9258373205741627,
+            "y": 0.5107398568019094,
             "uniqueID": 1747682094698,
             "ioValues": [
                 {
                     "name": "number or geometry",
-                    "ioValue": 1747682113906
+                    "ioValue": 1747682843983
                 }
             ],
             "description": "Connect geometry here to make it available in the next level up. "
@@ -51,9 +51,9 @@
         },
         {
             "atomType": "Input",
-            "name": "name1",
+            "name": "Large Diam add",
             "x": 0.04,
-            "y": 0.7231503579952268,
+            "y": 0.6420047732696897,
             "uniqueID": 1747682170612,
             "ioValues": [],
             "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
@@ -68,7 +68,7 @@
             "ioValues": [
                 {
                     "name": "diameter",
-                    "ioValue": 40
+                    "ioValue": 60
                 }
             ],
             "description": "Creates a new circle."
@@ -86,7 +86,7 @@
                 },
                 {
                     "name": "y",
-                    "ioValue": 30
+                    "ioValue": 50
                 }
             ],
             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
@@ -95,8 +95,8 @@
         {
             "atomType": "Move",
             "name": "Move",
-            "x": 0.34629186602870815,
-            "y": 0.6778042959427208,
+            "x": 0.3253588516746411,
+            "y": 0.60381861575179,
             "uniqueID": 1747682457947,
             "ioValues": [
                 {
@@ -105,7 +105,7 @@
                 },
                 {
                     "name": "xDist",
-                    "ioValue": 20
+                    "ioValue": 35
                 },
                 {
                     "name": "yDist",
@@ -119,29 +119,10 @@
             "description": "Moves a shape laterally in X, Y, Z."
         },
         {
-            "atomType": "Equation",
-            "name": "x/y",
-            "x": 0.2607655502392344,
-            "y": 0.766109785202864,
-            "uniqueID": 1747682494634,
-            "ioValues": [
-                {
-                    "name": "x",
-                    "ioValue": 40
-                },
-                {
-                    "name": "y",
-                    "ioValue": 2
-                }
-            ],
-            "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
-            "currentEquation": "x/y"
-        },
-        {
             "atomType": "Input",
-            "name": "name2",
+            "name": "Movement",
             "x": 0.04,
-            "y": 0.8281622911694511,
+            "y": 0.7995226730310263,
             "uniqueID": 1747682525547,
             "ioValues": [],
             "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
@@ -190,16 +171,46 @@
                 }
             ],
             "description": "Joins two or more drawings into a single sketch by filling in the space between them. Also called 'hull'"
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.5962918660287081,
+            "y": 0.7350835322195703,
+            "uniqueID": 1747682843983,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1747682618102
+                },
+                {
+                    "name": "height",
+                    "ioValue": 50
+                }
+            ],
+            "description": "Extrudes a 2D shape. Input can be negitive. "
+        },
+        {
+            "atomType": "Equation",
+            "name": "x - y",
+            "x": 0.2715311004784689,
+            "y": 0.2386634844868735,
+            "uniqueID": 1747682976311,
+            "ioValues": [
+                {
+                    "name": "x",
+                    "ioValue": 1
+                },
+                {
+                    "name": "y",
+                    "ioValue": 1
+                }
+            ],
+            "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
+            "currentEquation": "x - y"
         }
     ],
     "allConnectors": [
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "number or geometry",
-            "ap2Primary": false,
-            "ap1ID": 1747682113906,
-            "ap2ID": 1747682094698
-        },
         {
             "ap1Name": "geometry",
             "ap2Name": "Shape 1",
@@ -213,6 +224,13 @@
             "ap2Primary": false,
             "ap1ID": 1747682170612,
             "ap2ID": 1747682345320
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "height",
+            "ap2Primary": false,
+            "ap1ID": 1747682170612,
+            "ap2ID": 1747682843983
         },
         {
             "ap1Name": "geometry",
@@ -229,13 +247,6 @@
             "ap2ID": 1747682327929
         },
         {
-            "ap1Name": "result",
-            "ap2Name": "x",
-            "ap2Primary": false,
-            "ap1ID": 1747682345320,
-            "ap2ID": 1747682494634
-        },
-        {
             "ap1Name": "geometry",
             "ap2Name": "Shape 2",
             "ap2Primary": false,
@@ -243,18 +254,11 @@
             "ap2ID": 1747682618102
         },
         {
-            "ap1Name": "result",
+            "ap1Name": "number or geometry",
             "ap2Name": "xDist",
             "ap2Primary": false,
-            "ap1ID": 1747682494634,
-            "ap2ID": 1747682457947
-        },
-        {
-            "ap1Name": "number or geometry",
-            "ap2Name": "y",
-            "ap2Primary": false,
             "ap1ID": 1747682525547,
-            "ap2ID": 1747682494634
+            "ap2ID": 1747682457947
         },
         {
             "ap1Name": "number or geometry",
@@ -269,6 +273,20 @@
             "ap2Primary": false,
             "ap1ID": 1747682586928,
             "ap2ID": 1747682345320
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1747682618102,
+            "ap2ID": 1747682843983
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 1747682843983,
+            "ap2ID": 1747682094698
         }
     ],
     "unitsKey": "Inches",
