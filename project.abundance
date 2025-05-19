@@ -15,7 +15,7 @@
         },
         {
             "name": "Small Diam",
-            "ioValue": 10
+            "ioValue": 30
         }
     ],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -44,7 +44,7 @@
             "ioValues": [
                 {
                     "name": "diameter",
-                    "ioValue": 10
+                    "ioValue": 30
                 }
             ],
             "description": "Creates a new circle."
@@ -68,7 +68,7 @@
             "ioValues": [
                 {
                     "name": "diameter",
-                    "ioValue": 60
+                    "ioValue": 80
                 }
             ],
             "description": "Creates a new circle."
@@ -82,7 +82,7 @@
             "ioValues": [
                 {
                     "name": "x",
-                    "ioValue": 10
+                    "ioValue": 30
                 },
                 {
                     "name": "y",
@@ -109,7 +109,7 @@
                 },
                 {
                     "name": "yDist",
-                    "ioValue": 0
+                    "ioValue": 35
                 },
                 {
                     "name": "zDist",
@@ -199,11 +199,11 @@
             "ioValues": [
                 {
                     "name": "x",
-                    "ioValue": 10
+                    "ioValue": 30
                 },
                 {
                     "name": "y",
-                    "ioValue": 1
+                    "ioValue": 5
                 }
             ],
             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
@@ -218,7 +218,7 @@
             "ioValues": [
                 {
                     "name": "diameter",
-                    "ioValue": 9
+                    "ioValue": 25
                 }
             ],
             "description": "Creates a new circle."
@@ -232,7 +232,7 @@
             "ioValues": [
                 {
                     "name": "diameter",
-                    "ioValue": 61
+                    "ioValue": 85
                 }
             ],
             "description": "Creates a new circle."
@@ -240,17 +240,17 @@
         {
             "atomType": "Equation",
             "name": "x + y",
-            "x": 0.37679425837320574,
-            "y": 0.4248210023866349,
+            "x": 0.3738038277511962,
+            "y": 0.4343675417661098,
             "uniqueID": 1747683054526,
             "ioValues": [
                 {
                     "name": "x",
-                    "ioValue": 60
+                    "ioValue": 80
                 },
                 {
                     "name": "y",
-                    "ioValue": 1
+                    "ioValue": 5
                 }
             ],
             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
@@ -398,6 +398,13 @@
             "ap2Primary": false,
             "ap1ID": 1747682525547,
             "ap2ID": 1747683122297
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "yDist",
+            "ap2Primary": false,
+            "ap1ID": 1747682525547,
+            "ap2ID": 1747682457947
         },
         {
             "ap1Name": "number or geometry",
