@@ -141,8 +141,8 @@
         {
             "atomType": "ShrinkWrap",
             "name": "Shrink Wrap",
-            "x": 0.48444976076555024,
-            "y": 0.6133651551312649,
+            "x": 0.5944976076555024,
+            "y": 0.5298329355608592,
             "uniqueID": 1747682618102,
             "ioValues": [
                 {
@@ -175,13 +175,13 @@
         {
             "atomType": "Extrude",
             "name": "Extrude",
-            "x": 0.5962918660287081,
-            "y": 0.7350835322195703,
+            "x": 0.757177033492823,
+            "y": 0.6873508353221957,
             "uniqueID": 1747682843983,
             "ioValues": [
                 {
                     "name": "geometry",
-                    "ioValue": 1747682618102
+                    "ioValue": 1747683200302
                 },
                 {
                     "name": "height",
@@ -193,13 +193,13 @@
         {
             "atomType": "Equation",
             "name": "x - y",
-            "x": 0.2715311004784689,
+            "x": 0.24880382775119617,
             "y": 0.2386634844868735,
             "uniqueID": 1747682976311,
             "ioValues": [
                 {
                     "name": "x",
-                    "ioValue": 1
+                    "ioValue": 10
                 },
                 {
                     "name": "y",
@@ -208,6 +208,131 @@
             ],
             "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
             "currentEquation": "x - y"
+        },
+        {
+            "atomType": "Circle",
+            "name": "Circle",
+            "x": 0.4557416267942584,
+            "y": 0.22673031026252985,
+            "uniqueID": 1747683018166,
+            "ioValues": [
+                {
+                    "name": "diameter",
+                    "ioValue": 9
+                }
+            ],
+            "description": "Creates a new circle."
+        },
+        {
+            "atomType": "Circle",
+            "name": "Circle",
+            "x": 0.43600478468899523,
+            "y": 0.40811455847255373,
+            "uniqueID": 1747683045665,
+            "ioValues": [
+                {
+                    "name": "diameter",
+                    "ioValue": 61
+                }
+            ],
+            "description": "Creates a new circle."
+        },
+        {
+            "atomType": "Equation",
+            "name": "x + y",
+            "x": 0.37679425837320574,
+            "y": 0.4248210023866349,
+            "uniqueID": 1747683054526,
+            "ioValues": [
+                {
+                    "name": "x",
+                    "ioValue": 60
+                },
+                {
+                    "name": "y",
+                    "ioValue": 1
+                }
+            ],
+            "description": "Defines a mathematical equation. Edit the output field to add or remove inputs.",
+            "currentEquation": "x + y"
+        },
+        {
+            "atomType": "ShrinkWrap",
+            "name": "Shrink Wrap",
+            "x": 0.6381578947368421,
+            "y": 0.29594272076372313,
+            "uniqueID": 1747683090297,
+            "ioValues": [
+                {
+                    "name": "Shape 1",
+                    "ioValue": 1747683018166
+                },
+                {
+                    "name": "Shape 3",
+                    "ioValue": 1747683122297
+                },
+                {
+                    "name": "Shape 4",
+                    "ioValue": ""
+                },
+                {
+                    "name": "Shape 1",
+                    "ioValue": 1747683018166
+                },
+                {
+                    "name": "Shape 3",
+                    "ioValue": 1747683122297
+                },
+                {
+                    "name": "Shape 4",
+                    "ioValue": ""
+                }
+            ],
+            "description": "Joins two or more drawings into a single sketch by filling in the space between them. Also called 'hull'"
+        },
+        {
+            "atomType": "Move",
+            "name": "Move",
+            "x": 0.479066985645933,
+            "y": 0.8042959427207638,
+            "uniqueID": 1747683122297,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1747683045665
+                },
+                {
+                    "name": "xDist",
+                    "ioValue": 35
+                },
+                {
+                    "name": "yDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "zDist",
+                    "ioValue": 0
+                }
+            ],
+            "description": "Moves a shape laterally in X, Y, Z."
+        },
+        {
+            "atomType": "Difference",
+            "name": "Difference",
+            "x": 0.7416267942583732,
+            "y": 0.41766109785202865,
+            "uniqueID": 1747683200302,
+            "ioValues": [
+                {
+                    "name": "geometry1",
+                    "ioValue": 1747683090297
+                },
+                {
+                    "name": "geometry2",
+                    "ioValue": 1747682618102
+                }
+            ],
+            "description": "Subtracts shape two from shape one."
         }
     ],
     "allConnectors": [
@@ -247,6 +372,13 @@
             "ap2ID": 1747682327929
         },
         {
+            "ap1Name": "result",
+            "ap2Name": "x",
+            "ap2Primary": false,
+            "ap1ID": 1747682345320,
+            "ap2ID": 1747683054526
+        },
+        {
             "ap1Name": "geometry",
             "ap2Name": "Shape 2",
             "ap2Primary": false,
@@ -259,6 +391,13 @@
             "ap2Primary": false,
             "ap1ID": 1747682525547,
             "ap2ID": 1747682457947
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "xDist",
+            "ap2Primary": false,
+            "ap1ID": 1747682525547,
+            "ap2ID": 1747683122297
         },
         {
             "ap1Name": "number or geometry",
@@ -275,11 +414,18 @@
             "ap2ID": 1747682345320
         },
         {
+            "ap1Name": "number or geometry",
+            "ap2Name": "x",
+            "ap2Primary": false,
+            "ap1ID": 1747682586928,
+            "ap2ID": 1747682976311
+        },
+        {
             "ap1Name": "geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": true,
+            "ap2Name": "geometry2",
+            "ap2Primary": false,
             "ap1ID": 1747682618102,
-            "ap2ID": 1747682843983
+            "ap2ID": 1747683200302
         },
         {
             "ap1Name": "geometry",
@@ -287,6 +433,55 @@
             "ap2Primary": false,
             "ap1ID": 1747682843983,
             "ap2ID": 1747682094698
+        },
+        {
+            "ap1Name": "result",
+            "ap2Name": "diameter",
+            "ap2Primary": false,
+            "ap1ID": 1747682976311,
+            "ap2ID": 1747683018166
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 1",
+            "ap2Primary": false,
+            "ap1ID": 1747683018166,
+            "ap2ID": 1747683090297
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1747683045665,
+            "ap2ID": 1747683122297
+        },
+        {
+            "ap1Name": "result",
+            "ap2Name": "diameter",
+            "ap2Primary": false,
+            "ap1ID": 1747683054526,
+            "ap2ID": 1747683045665
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry1",
+            "ap2Primary": false,
+            "ap1ID": 1747683090297,
+            "ap2ID": 1747683200302
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 3",
+            "ap2Primary": false,
+            "ap1ID": 1747683122297,
+            "ap2ID": 1747683090297
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1747683200302,
+            "ap2ID": 1747682843983
         }
     ],
     "unitsKey": "Inches",
